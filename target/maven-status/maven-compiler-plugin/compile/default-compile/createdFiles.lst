@@ -1,0 +1,4 @@
+io/serd/malbot/exception/NoSystemVarException.class
+io/serd/malbot/BuildVars.class
+io/serd/malbot/bot/MalBot.class
+io/serd/malbot/Main.class
