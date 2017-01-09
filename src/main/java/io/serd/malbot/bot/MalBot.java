@@ -4,13 +4,14 @@ import io.serd.malbot.BuildVars;
 import org.telegram.telegrambots.api.methods.BotApiMethod;
 import org.telegram.telegrambots.api.methods.send.SendMessage;
 import org.telegram.telegrambots.api.objects.Update;
+import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.bots.TelegramWebhookBot;
 
 /**
  *
  * @author Atte Lassila
  */
-public class MalBot extends TelegramWebhookBot {
+public class MalBot extends TelegramLongPollingBot {
 
     @Override
     public String getBotToken() {
@@ -23,20 +24,9 @@ public class MalBot extends TelegramWebhookBot {
     }
 
     @Override
-    public BotApiMethod onWebhookUpdateReceived(Update update) {
-        if (update.hasMessage() && update.getMessage().hasText()) {
-            SendMessage sendMessage = new SendMessage();
-            sendMessage.setChatId(update.getMessage().getChatId().toString());
-            sendMessage.setText("Well, all information looks like noise until you break the code.");
-            return sendMessage;
-        }
-        return null;
-
+    public void onUpdateReceived(Update update) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    @Override
-    public String getBotPath() {
-        return BuildVars.botName;
-    }
 
 }
