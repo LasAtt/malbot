@@ -1,7 +1,7 @@
 MalBot
 ======
 
-Telegram Bot for querying MyAnimeList API for Anime
+Telegram Bot for querying MyAnimeList API for Anime. This Bot uses the excellent [Telegram Bots Api](https://github.com/rubenlagus/TelegramBots) for functionality.
 
 Usage 
 -----
