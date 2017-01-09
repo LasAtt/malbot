@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.serd</groupId>
     <artifactId>malbot</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <packaging>jar</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -17,23 +17,14 @@
             <artifactId>telegrambots</artifactId>
             <version>2.4.4</version>
         </dependency>
-        <dependency> 
-            <groupId>org.projectlombok</groupId> 
-            <artifactId>lombok</artifactId> 
-            <version>1.16.6</version>
-            <type>jar</type>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.12</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>  
-    
-    <distributionManagement>
-        <repository>
-            <id>serd.io</id>
-            <name>malbot snapshots</name>
-            <url>scpexe://serd.io/home/atte/malbot</url>
-        </repository>
-    </distributionManagement>
- 
-    
+        
     <build>
         <extensions>
             <extension>

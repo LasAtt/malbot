@@ -2,6 +2,8 @@ package io.serd.malbot.domain;
 
 import java.net.URI;
 import java.util.Date;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import lombok.Data;
@@ -11,8 +13,9 @@ import lombok.Data;
  * @author Atte Lassila
  */
 @Data
-@XmlRootElement
-public class Entry {
+@XmlRootElement(name = "entry")
+@XmlAccessorType(XmlAccessType.FIELD)
+public class AnimeEntry {
     @XmlElement
     private long id;
     @XmlElement
